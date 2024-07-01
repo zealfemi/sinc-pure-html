@@ -1,0 +1,626 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+}
+
+:root {
+  /* COLORS */
+  --color-black: #000000;
+  --color-black-semi: #303030;
+  --color-white: #ffffff;
+  --color-orange: #f47733;
+  --color-green: #20888f;
+  --color-pink: #ff88c6;
+  --body-bg-color: #f4f4f4;
+
+  /* PADDING */
+  --padding-left: clamp(60px, 4vw, 120px);
+  --padding-right: clamp(60px, 4vw, 120px);
+}
+
+/* DEFAULT STYLING */
+
+a:any-link {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+section {
+  margin-bottom: clamp(75px, 4vw, 100px);
+}
+
+/* BUTTONS */
+button {
+  background: transparent;
+  border: none;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 24px;
+  max-height: 49px;
+
+  border: 1px solid black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: transparent;
+  border-radius: 24px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.btn-black {
+  background-color: var(--color-black-semi);
+  color: var(--color-white);
+  border: 1px solid var(--color-black-semi);
+}
+
+.btn-white {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-black-semi);
+}
+
+.btn-green {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border: 1px solid var(--color-green);
+}
+
+/* HEADER */
+header {
+  height: 98px;
+  z-index: 1;
+}
+
+nav {
+  background-color: var(--body-bg-color);
+  z-index: 1;
+}
+
+.navbar-brand {
+  height: 64px;
+}
+
+.navbar-brand img {
+  height: 100%;
+}
+
+.btns-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* BANNERS SECTION */
+.section-banner {
+  background-color: var(--color-white);
+}
+
+.carousel-item-container {
+  display: grid;
+  height: 100vh;
+}
+
+.carousel-content {
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: center;
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.carousel-item-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--body-bg-color);
+}
+
+.carousel-indicators .active {
+  background-color: var(--color-black);
+}
+
+/* QUOTE SECTION */
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px;
+  gap: 1rem;
+  max-width: 883px;
+
+  background-color: var(--color-white);
+  border-radius: 32px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote-arthur-details {
+  font-size: 14px;
+}
+
+.quote-arthur {
+  font-weight: bold;
+}
+
+/* NETWORK SECTION */
+
+.section-cards {
+  gap: 1rem;
+}
+
+.section-card {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 0.5rem;
+
+  background-color: var(--color-white);
+  border-radius: 12px;
+  height: 100%;
+}
+
+.section-card-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.section-card h4 {
+  width: 100%;
+  text-align: center;
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  gap: 0.3rem;
+}
+
+.learn-more span {
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+
+.learn-more img {
+  width: 16px;
+  height: 16px;
+}
+
+/* AREA OF FOCUS */
+
+.area-of-focus-cols div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 80px;
+
+  width: 50%;
+
+  margin: 0 auto;
+}
+
+.area-of-focus-cols div:first-child {
+  background-color: var(--color-black-semi);
+  color: white;
+}
+
+.area-of-focus-cols div:nth-child(2) {
+  background-color: var(--color-orange);
+  color: white;
+}
+
+.area-of-focus-cols div:nth-child(3) {
+  background-color: var(--color-pink);
+  color: white;
+}
+
+.area-of-focus-cols div:nth-child(4) {
+  background-color: var(--color-green);
+  color: white;
+}
+
+.area-of-focus-cols div:last-child {
+  background-color: var(--color-pink);
+  color: white;
+  width: 100%;
+  border-top: 1px solid var(--body-bg-color);
+}
+
+/* OUR SERVICE */
+.case-study {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* PORTFOLIO */
+.our-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+/* CO-FOUND */
+.co-found-num {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-content: center center;
+  border-radius: 50%;
+  color: var(--color-white);
+}
+
+.num-1 {
+  background-color: var(--color-black-semi);
+}
+.num-2 {
+  background-color: var(--color-orange);
+}
+.num-3 {
+  background-color: var(--color-pink);
+}
+
+#co-found h4 {
+  text-align: left;
+}
+
+/* SIMPLE SLIDER */
+.simple-carousel {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.simple-carousel-btns {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.simple-carousel-arrow {
+  width: 60px;
+  height: 60px;
+
+  border: 1px solid var(--color-black-semi);
+  border-radius: 50%;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.simple-carousel-container {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  scroll-snap-type: x mandatory;
+  flex-flow: row nowrap;
+  scroll-behavior: smooth;
+}
+
+.simple-carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.simple-carousel-slide {
+  flex: 1 0 30%;
+  aspect-ratio: 1;
+  flex-flow: column nowrap;
+  display: flex;
+  gap: 1rem;
+  scroll-snap-align: center;
+  height: 100%;
+}
+
+.simple-carousel-slide h4 {
+  text-align: left;
+}
+
+.simple-carousel-slide {
+  flex: 1 0 90%;
+}
+
+.eir-program-icon {
+  width: 50px;
+  height: 50px;
+
+  background-color: var(--color-black-semi);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: grid;
+  place-content: center center;
+}
+
+/* SINC INVESTORS */
+.sinc-investors-row {
+  border: 1px solid #a4a4a4;
+  border-bottom: none;
+  border-left: none;
+}
+
+.sinc-investors-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 12px;
+
+  border-bottom: 1px solid #a4a4a4;
+  border-left: 1px solid #a4a4a4;
+}
+
+.sinc-investors-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sinc-investors-inner-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 12px;
+  height: 100%;
+
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* BLOGS */
+.blog-large {
+  position: relative;
+  width: 100%;
+}
+
+.blog-large-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.blog-large-details {
+  position: absolute;
+  width: 100%;
+  padding: 16px;
+  bottom: 0;
+  color: var(--color-white);
+  background-color: rgba(0, 0, 0, 0.253);
+}
+
+.blog-large-time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blog-small {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.blog-small p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.blog-small-image {
+  width: 85px;
+  height: auto;
+}
+
+/* FEATURED */
+
+.featured-slider-container {
+  position: relative;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+}
+
+.featured-slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.featured-slider {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  animation: 15s sliding linear infinite;
+}
+
+.featured-slide {
+  position: relative;
+  min-width: 70vw;
+  height: 100%;
+
+  background-color: var(--color-white);
+}
+
+.featured-slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes sliding {
+  0% {
+    transform: translateX(-60%);
+  }
+  20% {
+    transform: translateX(-60%);
+  }
+  25% {
+    transform: translateX(-133%);
+  }
+  45% {
+    transform: translateX(-133%);
+  }
+  50% {
+    transform: translateX(-206%);
+  }
+  70% {
+    transform: translateX(-206%);
+  }
+  75% {
+    transform: translateX(10%);
+  }
+  95% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-60%);
+  }
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--color-black-semi);
+  color: var(--color-white);
+}
+
+.footer-links {
+  border-top: 1px solid #c9c9c9;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer-logo {
+  width: 110px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.aba-plus-logo {
+  width: 175px;
+  height: 65px;
+  object-fit: contain;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+  max-width: 500px;
+}
+
+.newsletter-form {
+  display: flex;
+  border: 1px solid #676767;
+  border-radius: 24px;
+  width: clamp(350px, 3vw, 400px);
+}
+
+.newsletter-form input {
+  flex-grow: 1;
+  background-color: transparent;
+  border-radius: 24px;
+  border: none;
+  padding: 13px;
+  color: var(--color-white);
+}
+
+/* SCREENS */
+@media screen and (min-width: 576px) {
+  .carousel-item-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 500px;
+  }
+
+  .carousel-item-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .simple-carousel-slide {
+    flex: 1 0 70%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .simple-carousel-slide {
+    flex: 1 0 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .area-of-focus-cols div:last-child {
+    width: 50%;
+    border-top: none;
+  }
+
+  .simple-carousel-slide {
+    flex: 1 0 30%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-portfolio {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    place-content: center center;
+    gap: 1rem;
+  }
+
+  .sinc-investors-row {
+    border-right: none;
+  }
+  .sinc-investors-col:first-child {
+    border-left: none;
+  }
+
+  .location-col {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .line-vert {
+    border-left: 1px solid #c9c9c9;
+    height: 99%;
+    align-self: center;
+  }
+}
