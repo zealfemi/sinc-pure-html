@@ -194,7 +194,7 @@ nav {
 }
 
 .center h5 {
-  text-align: center;
+  text-align: center !important;
 }
 
 .learn-more {
