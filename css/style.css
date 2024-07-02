@@ -337,7 +337,6 @@ nav {
 
 .simple-carousel-slide {
   flex: 1 0 30%;
-  aspect-ratio: 1;
   flex-flow: column nowrap;
   display: flex;
   gap: 1rem;
@@ -359,7 +358,7 @@ nav {
 
   background-color: var(--color-black-semi);
   color: var(--color-white);
-  border-radius: 50%;
+  border-radius: 24px;
   display: grid;
   place-content: center center;
 }
