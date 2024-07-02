@@ -445,10 +445,9 @@ nav {
 
 .featured-slider-container {
   position: relative;
-  /* height: 100vh; */
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  /* align-items: center; */
   overflow: auto;
 }
 
@@ -458,11 +457,11 @@ nav {
 
 .featured-slider {
   position: relative;
-  width: 100vw;
+  min-width: 100vw;
   height: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   gap: 1rem;
   justify-content: space-between;
   animation: 15s sliding linear infinite;
