@@ -295,6 +295,7 @@ nav {
 }
 
 /* SIMPLE SLIDER */
+
 .simple-carousel {
   display: flex;
   justify-content: center;
@@ -364,6 +365,7 @@ nav {
 }
 
 /* SINC INVESTORS */
+
 .sinc-investors-row {
   border: 1px solid #a4a4a4;
   border-bottom: none;
@@ -570,7 +572,7 @@ footer ul li {
   .carousel-item-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 500px;
+    /* height: 500px; */
   }
 
   .carousel-item-container img {
